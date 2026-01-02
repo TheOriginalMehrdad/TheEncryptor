@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@drawable/gradient_shape"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_shape"
     android:fillViewport="true"
     tools:context=".MainActivity">
 
@@ -17,51 +17,53 @@
 
         <!-- Title -->
         <TextView
-            android:layout_marginTop="39dp"
-            android:textColor="@color/on_primary_container"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The Encryptor"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="39dp"
+            android:layout_marginBottom="66dp"
+            android:gravity="center"
+            android:text="Encryptor"
             android:textAlignment="center"
-            android:layout_marginBottom="111dp" />
+            android:textColor="#01365F"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <!-- Input Text -->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your message"
-            app:hintTextColor="@color/hint_color"
-            style="@style/CustomTextInputLayout">
+            app:hintTextColor="@color/hint_color">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputText"
-                android:textColor="@color/primary_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minLines="4"
                 android:gravity="top"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:textColor="@color/primary_container" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password/Key (Optional) -->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password (optional)"
             android:layout_marginTop="16dp"
-            app:hintTextColor="@color/hint_color"
-            style="@style/CustomTextInputLayout"
-            app:endIconMode="password_toggle">
+            android:hint="Password (optional)"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/hint_color">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordText"
-                android:textColor="@color/primary_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/primary_container" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,45 +71,45 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/encryptButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                android:text="Encrypt"
-                android:layout_marginEnd="8dp" />
+                android:text="Encrypt" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/decryptButton"
+                style="@style/Widget.Material3.Button.TonalButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Decrypt"
-                style="@style/Widget.Material3.Button.TonalButton" />
+                android:text="Decrypt" />
 
         </LinearLayout>
 
         <!-- Output Text -->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Output"
             android:layout_marginTop="16dp"
-            app:hintTextColor="@color/hint_color"
-            style="@style/CustomTextInputLayout">
+            android:hint="Output"
+            app:hintTextColor="@color/hint_color">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/outputText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minLines="4"
+                android:focusable="true"
                 android:gravity="top"
-                android:textColor="@color/primary_container"
                 android:inputType="textMultiLine"
-                android:focusable="true" />
+                android:minLines="4"
+                android:textColor="@color/primary_container" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,18 +117,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/copyButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:text="Copy Output"
-                app:strokeColor="@color/hint_color"
                 android:textColor="@color/text_on_gradient"
-                android:layout_marginEnd="8dp" />
+                app:strokeColor="@color/hint_color" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/clearButton"
@@ -134,8 +136,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Clear All"
-                app:strokeColor="@color/on_primary_container"
-                android:textColor="@color/text_on_gradient" />
+                android:textColor="@color/text_on_gradient"
+                app:strokeColor="@color/on_primary_container" />
 
         </LinearLayout>
 
