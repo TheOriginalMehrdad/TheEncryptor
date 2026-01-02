@@ -2,5 +2,37 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blue">#013B68</color>
+
+    <!-- Primary colors based on Light Blue palette (matches gradient) -->
+    <color name="primary">#0288D1</color>              <!-- Light Blue 700 -->
+    <color name="primary_dark">#01579B</color>         <!-- Light Blue 900 - gradient start -->
+    <color name="primary_light">#039BE5</color>        <!-- Light Blue 600 - gradient end -->
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Secondary/Accent colors -->
+    <color name="secondary">#00ACC1</color>            <!-- Cyan 600 - complementary -->
+    <color name="on_secondary">#FFFFFF</color>
+
+    <!-- Surface colors for inputs/cards on gradient -->
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#E1F5FE</color>      <!-- Light Blue 50 -->
+    <color name="on_surface">#1C1B1F</color>
+    <color name="on_surface_variant">#49454F</color>
+
+    <!-- Container colors -->
+    <color name="primary_container">#B3E5FC</color>    <!-- Light Blue 100 -->
+    <color name="on_primary_container">#01579B</color>
+    <color name="secondary_container">#B2EBF2</color>  <!-- Cyan 100 -->
+    <color name="on_secondary_container">#006064</color>
+
+    <!-- Outline for text fields -->
+    <color name="outline">#79747E</color>
+    <color name="outline_variant">#CAC4D0</color>
+
+    <!-- Text colors for use on gradient background -->
+    <color name="text_on_gradient">#FFFFFF</color>
+    <color name="text_on_gradient_secondary">#E1F5FE</color>
+
+    <!-- Hint color -->
+    <color name="hint_color">#01579B</color>
 </resources>
